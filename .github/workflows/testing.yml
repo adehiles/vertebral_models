@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Pytest
+# Controls when the workflow will run
+on: push
+
+jobs:   
+  test:
+    runs-on: ubuntu-lastest 
+    
+    
+    steps:
+    
+      - name: checkout repo
+        uses: actions/checkout@v2
+        with: 
+          python-version: "3.9.7"
+          
+     - name: Caching
+      uses: actions/cache@v2
+      with: 
+        path:$/{/{env.pythonLOcation/*}/}
+       
+     - name: Execute tests 
+        run: pytest tests
+      
+      
+        
