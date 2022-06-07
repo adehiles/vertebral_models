@@ -16,13 +16,12 @@ jobs:
         with: 
           python-version: "3.9.7"
           
-     - name: Caching
-      uses: actions/cache@v2
-      with: 
-        path:$/{/{env.pythonLOcation/*}/}
-       
-     - name: Execute tests 
+      - name: Caching
+        uses: actions/cache@v2
+
+
+      - name: Execute tests 
         run: pytest tests
-      
+
       
         
