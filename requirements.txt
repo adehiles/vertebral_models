@@ -1,0 +1,11 @@
+sklearn
+matplotlib
+numpy
+pandas
+mlflow
+plotly
+
+black
+isort
+flask
+pytest
